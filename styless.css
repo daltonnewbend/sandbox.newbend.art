@@ -1,0 +1,78 @@
+
+html {
+	background-color: #E0DBD1;
+	color: #35230F;
+	}
+
+html {
+	font: 1.2rem "Consolas", monospace;
+	}
+	a:special {
+		color: #35230F;
+	}
+	a:link {
+		color: #35230F;
+	}
+	a:visited {
+		color: #35230F;
+	}
+
+	nav{
+	font-size: 30px;
+	background color: #1a450a;
+	}
+
+	nav ul {
+	width: 100%;
+	height: 20px;
+	list-style: none;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	}
+
+	nav a{
+	height: 100%
+	padding: 0 30px;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	}
+
+ * {
+	margin: 0in;
+	padding: 0.125in;
+
+.wrapper{
+	width: 100%;
+}
+
+.img-banner{
+	width: 100%
+}
+
+.styled{
+  	border: 1;
+	border-color: #35230F;
+  	line-height: 2.75;
+ 	padding: 0 20px;
+  	font-size: 1.2rem;
+  	text-align: center;
+  	color:#35230F;
+ 	border-radius: 50px;
+  	background-color: #E0DBD1;
+	transition: 0.25s;
+}
+
+.styled:hover {
+  	color: #E0DBD1;
+	border: 1;
+ 	background-color: #1a450a;
+	border-color: #1a450a
+
+}
+
+.styled:active {
+  	color: #35230F;
+ 	 background-color: #E0DBD1;
+}
