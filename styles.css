@@ -5,11 +5,24 @@
     list-style: none;
     box-sizing: border-box;
 }
+@font-face {
+    font-family: 'Courior-Prime';
+    src: url(Courior_Prime);
+}
 body {
     min-height: 100vh;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courior-Prime', Courier, monospace;
     background-color: #E0DBD1;
-
+    font-size: 20px;
+}
+a:special {
+	color: #35230F;
+}
+a:link {
+	color: #35230F;
+}
+a:visited {
+    color: #35230F;
 }
 nav{
     background: #E0DBD1;
@@ -18,20 +31,22 @@ nav{
 }
 label.logo{
     color: #35230F;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 80px;
     padding: 0 30px;
     font-weight: bold;
 }
 nav ul{
     float: right;
-    margin-right: 20px;
+    margin-right: 0px;
 }
 nav ul li{
     display: inline-block;
     line-height: 80px;
     margin: 0 5px;
-    font-weight: normal;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 30px;
 }
 nav ul li a{
     color: #35230F
@@ -40,12 +55,12 @@ nav ul li a{
 .sidebar{
     position: fixed;
     top: 0;
-    right: 0;
+    right: 0px;
     height: 100vh;
-    width: 250px;
+    width: 105%;
     z-index: 999;
     background-color: #E0DBD1;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
@@ -54,16 +69,58 @@ nav ul li a{
     width: 100%;
 }
 .sidebar a{
-    width 100%;
+    width: 100%;
 }
-@media(max-width: 800px){
+.menu-button{
+    fill: #35230F;
+    size: 25px;
+    display: none;
+}
+.menu-exit{
+    fill:#35230F;
+}
+.img-banner{
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    paddinng: 20px 400px 20px;
+}
+.img-info{
+    width: 100%;
+    text-align: right;
+    padding: 20px 15px 20px 120px;
+}
+.buttons{
+  	border: 1;
+	border-color: #35230F;
+  	line-height: 2.75;
+ 	padding: 0 20px;
+  	font-size: 1.2rem;
+  	text-align: center;
+  	color:#35230F;
+ 	border-radius: 50px;
+  	background-color: #E0DBD1;
+	transition: 0.25s;
+}
+.buttons:hover {
+  	color: #E0DBD1;
+	border: 1;
+ 	background-color: #1a450a;
+	border-color: #1a450a
+}
+.buttons:active {
+  	color: #35230F;
+    background-color: #E0DBD1;
+}
+@media(max-width: 850px){
     .hideOnMobile{
         display: none;
-    }
-    .logo{
-        width: 100%;
-    }
+}
+    .menu-button{
+        display: block;
+}
 @media(max-width 400px){
     .sidebar{
         width: 100%;
-    }
+}

@@ -8,15 +8,36 @@
 		<link rel="stylesheet" href="styles.css" />
 		<meta name="description" content="dalton newbend"
 	</head>
-		<nav>
+	<body>
+	   <nav>
+		  <label class="logo"><a href="index.html">dalton newbend</a></lable>
+			<ul class="sidebar">
+			<li class="menu-exit" onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" width="25"><path d="m249-207-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></li>
+			<li><a href="index.html">home</a></li>
+			<li><a href="portfolio/portfolio.html">portfolio</a></li>
+			<li><a href="cv.html">cv</a></li>
+			<li><a href="blog.html">blog</a></li>
+			<li><a href="about.html">about</a></li>
+			</ul>
 			<ul>
-			<a href="index.html"><h4>dalton newbend</h4></a>
-			<a href="portfolio/portfolio.html">portfolio</a>
-			<a href="cv.html">cv</a>
-			<a href="blog.html">blog</a>
-			<a href="contact.html">contact</a>
+			<li class="hideOnMobile"><a href="portfolio/portfolio.html">portfolio</a></li>
+			<li class="hideOnMobile" ><a href="cv.html">cv</a></li>
+			<li class="hideOnMobile" ><a href="blog.html">blog</a></li>
+			<li class="hideOnMobile" ><a href="contact.html">contact</a></li>
+			<li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" width="25"><path d="M120-240v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></li>
 			</ul>
 		</nav><br>
+	<script>
+	   function showSidebar(){
+			const sidebar = document.querySelector('.sidebar')
+			sidebar.style.display = 'flex'
+			}
+		function hideSidebar(){
+	    	const sidebar = document.querySelector('.sidebar')
+			sidebar.style.display = 'none'
+		    }
+	</script>
+	</body>
 	<body>
 		<section>
 			<h4>Education</h4>
