@@ -1,0 +1,84 @@
+<div id="island"></div>
+<div id="sidebar">
+<a href="link1.html">Link 1</a>
+<a href="link2.html">Link 2</a>
+<a href="link3.html">Link 3</a>
+<button onclick="toggleSidebar()">Toggle Sidebar</button>
+</div>
+<button id="navButton" onclick="changeSite()">Navigate</button>
+<script>
+const island = document.getElementById('island');
+  const sidebar = document.getElementById('sidebar');
+  const navButton = document.getElementById('navButton');
+  const links = [
+    { href: 'link1.html', src: 'image1.png', title: 'Link 1' },
+    { href: 'link2.html', src: 'image2.png', title: 'Link 2' },
+    { href: 'link3.html', src: 'image3.png', title: 'Link 3' },
+  ];
+  
+  island.style.position = 'fixed';
+  island.style.top = '50%';
+  island.style.left = '50%';
+  island.style.transform = 'translate(-50%, -50%)';
+  island.style.background = 'url(island.png)';
+  island.style.backgroundSize = 'cover';
+  
+  sidebar.style.position = 'fixed';
+  sidebar.style.top = '0';
+  sidebar.style.left = '0';
+  sidebar.style.width = '200px';
+  sidebar.style.height = '100%';
+  sidebar.style.background = '#f0f0f0';
+  sidebar.style.transition = 'left 0.5s ease-in-out';
+  
+  navButton.style.position = 'fixed';
+  navButton.style.top = '10px';
+  navButton.style.right = '10px';
+  navButton.style.transition = 'background-color 0.5s ease-in-out';
+  
+  links.forEach(link => {
+    const a = document.createElement('a');
+    a.href = link.href;
+    a.innerText = link.title;
+    sidebar.appendChild(a);
+    
+    const img = document.createElement('img');
+    img.src = link.src;
+    island.appendChild(img);
+  });
+  
+  function toggleSidebar() {
+    sidebar.style.left = sidebar.style.left === '0' ? '-200px' : '0';
+  }
+  
+  function changeSite() {
+    let currentLink = document.querySelector('#sidebar a.active');
+    if (currentLink) {
+      currentLink.classList.remove('active');
+    }
+    
+    let nextLink = document.querySelector('#sidebar a:not(.active)');
+    if (nextLink) {
+      nextLink.classList.add('active');
+      navButton.style.backgroundColor = nextLink.style.backgroundColor;
+      window.location.href = nextLink.href;
+    }
+  }
+</script>
+<style>
+#sidebar a.active {
+    font-weight: bold;
+    background-color: #fcba03;
+  }
+  
+  @media screen and (max-width: 768px) {
+    #sidebar {
+      display: none;
+    }
+    #island {
+      display: block;
+      width: 100%;
+      height: auto;
+      position: relative;
+      top: 0;
+      left: 0;
