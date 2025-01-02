@@ -1,3 +1,9 @@
+/* BASE STYLES for DALTON.NEWBEND.ART */
+:root {
+    --clr-brown: #35230f;
+    --clr-cream: #e0dbd1;
+    --clr-green: #1a450a;
+}
 * {
     padding: 0;
     margin: 0;
@@ -5,32 +11,41 @@
     list-style: none;
     box-sizing: border-box;
 }
-@font-face {
-    font-family: 'Courior-Prime';
-    src: url(Courior_Prime);
-}
 body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    word-spacing: 1.4px;
+    font-family: monospace;
+    color: var(--clr-brown);
+    background-color: var(--clr-cream);
     min-height: 100vh;
-    font-family: 'Courior-Prime', Courier, monospace;
-    background-color: #E0DBD1;
     font-size: 20px;
 }
+
+body section {
+    margin: 0;
+    padding: 60px;
+}
+.img{
+    width: 50px;
+}
 a:special {
-	color: #35230F;
+    color: var(--clr-brown);
 }
 a:link {
-	color: #35230F;
+    color: var(--clr-brown);
 }
 a:visited {
-    color: #35230F;
+    color: var(--clr-brown);
 }
 nav{
-    background: #E0DBD1;
+    background: var(--clr-cream);
     height: 80px;
     width 100%;
 }
 label.logo{
-    color: #35230F;
+    color: var(--clr-brown);
     font-size: 25px;
     line-height: 80px;
     padding: 0 30px;
@@ -49,17 +64,17 @@ nav ul li{
     padding-right: 30px;
 }
 nav ul li a{
-    color: #35230F
+    color: var(--clr-brown)
     font-size: 18px;
 }
 .sidebar{
     position: fixed;
     top: 0;
-    right: 0px;
+    right: 0;
     height: 100vh;
     width: 105%;
     z-index: 999;
-    background-color: #E0DBD1;
+    background-color: var(--clr-cream);
     display: none;
     flex-direction: column;
     align-items: flex-start;
@@ -72,7 +87,7 @@ nav ul li a{
     width: 100%;
 }
 .menu-button{
-    fill: #35230F;
+    fill: var(--clr-brown);
     size: 25px;
     display: none;
 }
@@ -84,15 +99,39 @@ nav ul li a{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    paddinng: 20px 400px 20px;
 }
-.img-info{
-    width: 100%;
-    text-align: right;
-    padding: 20px 15px 20px 80px;
+/* ABOUT */\
+
+.wrapper{
+	display: flex;
+	flex-flow: row wrap;
+	text-align: right:
 }
+.wrapper > * {
+	padding: 10px;
+	margin: 10px;
+	flex: 1 100%;
+	border-radius: 10px;
+}
+.bio{
+	width: 100%;
+	text-align: right;
+	padding-left: 750px;
+	padding-right: 60px;
+}
+.container{
+    display: flex;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* BUTTONS */
+
 .buttons{
   	border: 1;
+  	font-family: monospace;
 	border-color: #35230F;
   	line-height: 2.75;
  	padding: 0 20px;
@@ -103,6 +142,22 @@ nav ul li a{
   	background-color: #E0DBD1;
 	transition: 0.25s;
 }
+.button-box-a{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	padding-right: 25px;
+	padding-bottom: 15px;
+
+}
+.button-box-b{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	padding-right: 25px;
+	padding-bottom: 15px;
+
+}
 .buttons:hover {
   	color: #E0DBD1;
 	border: 1;
@@ -111,16 +166,55 @@ nav ul li a{
 }
 .buttons:active {
   	color: #35230F;
-    background-color: #E0DBD1;
+   	background-color: #E0DBD1;
 }
-@media(max-width: 850px){
+
+/* SMALLER SCREEN */
+@media(max-width: 1050px){
     .hideOnMobile{
         display: none;
 }
     .menu-button{
         display: block;
 }
-@media(max-width 400px){
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    word-spacing: 1.4px;
+    color: var(--clr-brown);
+    background-color: var(--clr-cream);
+    min-height: 100vh;
+    font-size: 20px;
+}
+
+body section {
+    margin: 0;
+    padding: 30px;
+}
+
+.bio{
+    width: 100%;
+    text-align: left;
+}
+
+/* MOBILE DEVICE*/
+@media(max-width 600px){
     .sidebar{
         width: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    word-spacing: 1.4px;
+    color: var(--clr-brown);
+    background-color: var(--clr-cream);
+    min-height: 100vh;
+    font-size: 20px;
+}
+
+body section {
+    margin: 0;
+    padding: 5px;
 }
